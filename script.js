@@ -31,7 +31,8 @@ btn[0].addEventListener("click",() => {
         countbtn1 = 1;
     }
 
-    btnwait[0].style.zIndex = "2";
+    btnwait[0].style.display = "flex";
+    btn[0].style.display = "none";
 
     ranimg1 = setInterval(() => {
         if (countimgp1 > 2) {
@@ -109,7 +110,8 @@ btn[1].addEventListener("click",() => {
         countbtn2 = 1;
     }
 
-    btnwait[1].style.zIndex = "2";
+    btnwait[1].style.display = "flex";
+    btn[1].style.display = "none";
 
     ranimg2 = setInterval(() => {
         if (countimgp2 > 2) {
@@ -182,8 +184,10 @@ btn[1].addEventListener("click",() => {
 reset.addEventListener("click",() => {
     countmax = 3;
     count.innerHTML = countmax;
-    btnwait[0].style.zIndex = "-1";
-    btnwait[1].style.zIndex = "-1";
+    btnwait[0].style.display = "none";
+    btnwait[1].style.display = "none";
+    btn[0].style.display = "block";
+    btn[1].style.display = "block";
     reset.style.visibility = "hidden";
     countbtn1 = 0;
     countbtn2 = 0;
